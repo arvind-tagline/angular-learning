@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'calculator';
+
+  public cards = ['1', '2', '3', '4', '5', '6'];
+  public technologys = ['1', '2', '3', '4', '5', '6', '7', '8'];
 }
