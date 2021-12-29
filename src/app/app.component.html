@@ -17,40 +17,35 @@ Calculator Task end -->
 </div>
 <!-- card header end -->
 
+<!-- first card start -->
 <div class="d-flex justify-content-center flex-wrap">
     <div *ngFor="let card of cards">
-        <app-card></app-card>
+        <app-card [image]="card.image" [title]="card.title" [title]="card.subtitle" [btn]="card.btn"></app-card>
     </div>
 </div>
+<!-- first card end -->
 
+<!-- second hearder start -->
 <div class="d-flex justify-content-center text-center flex-wrap">
     <app-title *ngIf="true"></app-title>
 </div>
-
 <div class="d-flex justify-content-center text-center flex-wrap">
     <app-btn *ngIf="true"></app-btn>
 </div>
+<!-- second hearder end -->
 
+<!-- Our technology part start -->
 <div class="text-center mt-5">
     <h1 *ngIf="true">Our Techonologies</h1>
     <div class="d-flex justify-content-center text-center flex-wrap">
         <div *ngFor="let technology of technologys">
-            <app-technology></app-technology>
+            <app-technology [techimg]="technology.techimg"></app-technology>
         </div>
     </div>
-    <!-- <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology>
-    <app-technology></app-technology> -->
 </div>
+<!-- Our technology part end -->
 
+<!-- Start company experience -->
 <div class="c-bg mt-5">
     <div class="row m-0 text-center d-flex flex-wrap">
         <div class="col-sm-12">
@@ -60,53 +55,44 @@ Calculator Task end -->
     <div class="row m-0">
         <div class="col-sm-1"></div>
         <div class="col-sm-10 d-flex justify-content-center text-center flex-wrap">
-            <app-experience></app-experience>
-            <app-experience></app-experience>
-            <app-experience></app-experience>
-            <app-experience></app-experience>
+            <div *ngFor="let exprience of expriences">
+                <app-experience [text]="exprience.text" [subtext]="exprience.subtext"></app-experience>
+            </div>
         </div>
         <div class="col-sm-1"></div>
     </div>
 </div>
+<!-- company experience end -->
 
+<!-- client reviews part start -->
 <div class="row m-0 mt-5">
     <div class="col-sm-5">
         <app-clutch></app-clutch>
     </div>
     <div class="col-sm-7 ">
         <div class="d-flex justify-content-center flex-wrap">
-            <div *ngFor="let card of cards">
-                <app-reviews></app-reviews>
+            <div *ngFor="let reviewstxt of reviewstext">
+                <app-reviews [cardtext]="reviewstxt.cardtext" [subcardtxt]="reviewstxt.subcardtxt"></app-reviews>
             </div>
         </div>
     </div>
 </div>
+<!-- client reviews part end -->
 
-<h1 class="text-center">Our Techonologies</h1>
+<!-- company client part start -->
+<h1 class="text-center">Our Esteemed Clients</h1>
 <div class="row m-0 text-center mt-5 d-flex justify-content-center text-center flex-wrap">
     <div class="col-sm-1"></div>
-    <div class="col-sm-2">
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-    </div>
-    <div class="col-sm-2">
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-    </div>
-    <div class="col-sm-2">
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-    </div>
-    <div class="col-sm-2">
-        <app-clients></app-clients>
-        <app-clients></app-clients>
-        <app-clients></app-clients>
+    <div class="col-sm-10 d-flex justify-content-center text-center flex-wrap">
+        <div *ngFor="let clintimg of clintimgs">
+            <app-clients [clntimg]="clintimg.clntimg"></app-clients>
+        </div>
     </div>
     <div class="col-sm-1"></div>
 </div>
+<!-- company client part end -->
+
+<!-- slideing part start -->
 <div class="row m-0 mt-5 bg-secondary text-white">
     <div class="col-sm-5">
         <app-slide></app-slide>
@@ -117,6 +103,9 @@ Calculator Task end -->
         </div>
     </div>
 </div>
+<!-- slideing part end-->
+
+<!-- contact part start -->
 <div class="row m-0 bg-color">
     <div class="d-flex justify-content-center mt-5 text-center text-white flex-wrap">
         <app-contact></app-contact>
@@ -125,6 +114,9 @@ Calculator Task end -->
         <app-btn></app-btn>
     </div>
 </div>
+<!-- contact part end-->
+
+<!-- client comments part start -->
 <div class="row m-0 bg-light">
     <app-clientsay></app-clientsay>
     <div class="col-sm-5">
@@ -134,31 +126,17 @@ Calculator Task end -->
         <app-client-comment></app-client-comment>
     </div>
 </div>
-<div class="row m-0 d-flex mt-5 justify-content-center flex-wrap">
-    <h1 class="text-center">Our Blogs</h1>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-2">
-        <app-blog></app-blog>
-    </div>
-    <div class="col-sm-2">
-        <app-blog></app-blog>
-    </div>
-    <div class="col-sm-2">
-        <app-blog></app-blog>
-    </div>
-    <div class="col-sm-2">
-        <app-blog></app-blog>
-    </div>
-    <div class="col-sm-1"></div>
-</div>
-<div class="row m-0 d-flex mt-5 justify-content-center flex-wrap">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-10">
+<!-- client comments part end -->
 
+<!-- Blog part start -->
+<h1 class="text-center mt-5">Our Blog</h1>
+<div class="d-flex justify-content-center flex-wrap">
+    <div *ngFor="let blogs of blog">
+        <app-blog [blogimage]="blogs.blogimage" [blogtitle]="blogs.blogtitle" [blogsubtitle]="blogs.blogsubtitle"
+            [blogfooter]="blogs.blogfooter">
+        </app-blog>
     </div>
-    <div class="col-sm-1"></div>
 </div>
-<div>
-    <app-form></app-form>
-</div>
+<!-- Blog part start -->
+
 <router-outlet></router-outlet>

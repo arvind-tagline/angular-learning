@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./client-img.component.scss']
 })
 export class ClientImgComponent implements OnInit {
-  public clientimg: string = "https://png.pngitem.com/pimgs/s/273-2730577_transparent-people-group-png-people-group-vector-transparent.png";
+  public clientimg: string = "https://c1.wallpaperflare.com/preview/510/217/278/technology-business-computer-designer.jpg";
+
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
 }

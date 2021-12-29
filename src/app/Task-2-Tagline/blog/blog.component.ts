@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blog',
@@ -6,7 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./blog.component.scss']
 })
 export class BlogComponent implements OnInit {
-  public cardimg: string = "https://thumbs.dreamstime.com/b/lonely-elephant-against-sunset-beautiful-sun-clouds-savannah-serengeti-national-park-africa-tanzania-artistic-imag-image-106950644.jpg";
+
+  @Input() blogtitle: string = "";
+  @Input() blogsubtitle: string = "";
+  @Input() blogfooter: string = "";
+  @Input() blogimage: string = "";
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-technology',
@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./technology.component.scss']
 })
 export class TechnologyComponent implements OnInit {
-  public python: string = "https://taglineinfotech.com/wp-content/uploads/2021/08/python-logo-img3.png";
+
+  @Input() techimg: string = "";
+
   constructor() { }
 
   ngOnInit(): void {

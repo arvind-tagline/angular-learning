@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-clients',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./clients.component.scss']
 })
 export class ClientsComponent implements OnInit {
-  public client: string = "https://taglineinfotech.com/wp-content/uploads/2021/01/client-logo-6.png";
+  @Input() clntimg: string = "";
+
   constructor() { }
 
   ngOnInit(): void {

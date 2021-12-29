@@ -19,7 +19,6 @@ import { ClientsComponent } from './Task-2-Tagline/clients/clients.component';
 import { HeardersComponent } from './Task-2-Tagline/hearders/hearders.component';
 import { TitleComponent } from './Task-2-Tagline/title/title.component';
 import { Title2Component } from './Task-2-Tagline/title2/title2.component';
-import { CardTextComponent } from './Task-2-Tagline/reviews/card-text/card-text.component';
 import { SlideComponent } from './Task-2-Tagline/slide/slide.component';
 import { SlideImgComponent } from './Task-2-Tagline/slide/slide-img/slide-img.component';
 import { ContactComponent } from './Task-2-Tagline/contact/contact.component';
@@ -28,6 +27,7 @@ import { ClientImgComponent } from './Task-2-Tagline/clientsay/client-img/client
 import { ClientCommentComponent } from './Task-2-Tagline/clientsay/client-comment/client-comment.component';
 import { BlogComponent } from './Task-2-Tagline/blog/blog.component';
 import { FormComponent } from './Task-2-Tagline/form/form.component';
+import { CardtextComponent } from './Task-2-Tagline/cardtext/cardtext.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +48,6 @@ import { FormComponent } from './Task-2-Tagline/form/form.component';
     HeardersComponent,
     TitleComponent,
     Title2Component,
-    CardTextComponent,
     SlideComponent,
     SlideImgComponent,
     ContactComponent,
@@ -56,7 +55,8 @@ import { FormComponent } from './Task-2-Tagline/form/form.component';
     ClientImgComponent,
     ClientCommentComponent,
     BlogComponent,
-    FormComponent
+    FormComponent,
+    CardtextComponent,
   ],
   imports: [
     BrowserModule,
